@@ -99,13 +99,9 @@
 		BBDFF3942634476400B85F7C /* yumemi-ios */ = {
 			isa = PBXGroup;
 			children = (
-				BBDFF3952634476400B85F7C /* AppDelegate.swift */,
-				BBDFF3972634476400B85F7C /* SceneDelegate.swift */,
-				BBDFF3992634476400B85F7C /* ViewController.swift */,
-				BBDFF39B2634476400B85F7C /* Main.storyboard */,
-				BBDFF39E2634476500B85F7C /* Assets.xcassets */,
-				BBDFF3A02634476500B85F7C /* LaunchScreen.storyboard */,
-				BBDFF3A32634476500B85F7C /* Info.plist */,
+				BBDFF3CC26344B0800B85F7C /* Resources */,
+				BBDFF3CB26344AFE00B85F7C /*  Sources */,
+				BBDFF3CD26344B1200B85F7C /* Storyboards */,
 			);
 			path = "yumemi-ios";
 			sourceTree = "<group>";
@@ -126,6 +122,66 @@
 				BBDFF3B92634476600B85F7C /* Info.plist */,
 			);
 			path = "yumemi-iosUITests";
+			sourceTree = "<group>";
+		};
+		BBDFF3CB26344AFE00B85F7C /*  Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BBDFF3CF26344B6E00B85F7C /* Models */,
+				BBDFF3D026344B7500B85F7C /* Views */,
+				BBDFF3D126344B7B00B85F7C /* Presenters */,
+				BBDFF3CE26344B2300B85F7C /* AppDelegate */,
+			);
+			path = " Sources";
+			sourceTree = "<group>";
+		};
+		BBDFF3CC26344B0800B85F7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BBDFF39E2634476500B85F7C /* Assets.xcassets */,
+				BBDFF3A32634476500B85F7C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BBDFF3CD26344B1200B85F7C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BBDFF39B2634476400B85F7C /* Main.storyboard */,
+				BBDFF3A02634476500B85F7C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BBDFF3CE26344B2300B85F7C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BBDFF3952634476400B85F7C /* AppDelegate.swift */,
+				BBDFF3972634476400B85F7C /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		BBDFF3CF26344B6E00B85F7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BBDFF3D026344B7500B85F7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBDFF3992634476400B85F7C /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BBDFF3D126344B7B00B85F7C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

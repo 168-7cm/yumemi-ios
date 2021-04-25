@@ -22,8 +22,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-Ck-vAp">
                                         <rect key="frame" x="103.5" y="295.5" width="207" height="227.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0ff-0m-IUY">
-                                                <rect key="frame" x="0.0" y="2.5" width="207" height="202.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ff-0m-IUY">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="207"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0ff-0m-IUY" secondAttribute="height" multiplier="1:1" id="fAh-k5-hpx"/>
                                                 </constraints>
@@ -64,11 +64,14 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xj-Qk-Uz6">
                                                 <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="cancel"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-WA-vAk">
                                                 <rect key="frame" x="103.5" y="0.0" width="103.5" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="reload"/>
+                                                <connections>
+                                                    <action selector="reloadButtonDidTapped:" destination="ctR-2m-hPK" eventType="touchUpInside" id="4Yt-zs-6IC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -94,6 +97,9 @@
                             <constraint firstItem="3TJ-JI-VJv" firstAttribute="top" secondItem="MF3-qk-D8W" secondAttribute="top" id="Xvd-zP-1V3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="weatherImageView" destination="0ff-0m-IUY" id="U2t-X8-EmE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHH-k5-6uJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,7 +107,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

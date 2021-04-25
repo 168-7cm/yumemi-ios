@@ -12,6 +12,12 @@ class WeatherViewController: UIViewController {
 
     @IBOutlet weak var weatherImageView: UIImageView!
 
+    private var presenter: WeatherPresenterOutput!
+
+    func inject(presenter: WeatherPresenterOutput) {
+        self.presenter = presenter
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,4 +42,8 @@ class WeatherViewController: UIViewController {
             break
         }
     }
+}
+
+extension WeatherViewController: WeatherPresenterOutput {
+
 }

@@ -12,7 +12,6 @@
 		A1168E00B4B06922B30B4D9B /* Pods_yumemi_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0CE4BC1C1132FDF0F80A2A /* Pods_yumemi_iosTests.framework */; };
 		BB06FE202635674200562776 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06FE1F2635674200562776 /* WeatherModel.swift */; };
 		BB06FE252635674C00562776 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06FE242635674C00562776 /* WeatherPresenter.swift */; };
-		BB06FE2D26356E8500562776 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06FE2C26356E8500562776 /* APIRequest.swift */; };
 		BBDFF3962634476400B85F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3952634476400B85F7C /* AppDelegate.swift */; };
 		BBDFF3982634476400B85F7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3972634476400B85F7C /* SceneDelegate.swift */; };
 		BBDFF39F2634476500B85F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDFF39E2634476500B85F7C /* Assets.xcassets */; };
@@ -21,7 +20,7 @@
 		BBDFF3B82634476600B85F7C /* yumemi_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3B72634476600B85F7C /* yumemi_iosUITests.swift */; };
 		BBDFF3D926344C3300B85F7C /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDFF3D826344C3200B85F7C /* Weather.storyboard */; };
 		BBDFF3E426344C5700B85F7C /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3E326344C5700B85F7C /* WeatherViewController.swift */; };
-		BBDFF3EA26344CF900B85F7C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = BBDFF3E926344CF900B85F7C /* SwiftPackageProductDependency */; };
+		BBDFF3EA26344CF900B85F7C /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = BBDFF3E926344CF900B85F7C /* YumemiWeather */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 		AD61998D3D0F1448DD4EDD5B /* Pods-yumemi-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB06FE1F2635674200562776 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		BB06FE242635674C00562776 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
-		BB06FE2C26356E8500562776 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		BBDFF3922634476400B85F7C /* yumemi-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yumemi-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDFF3952634476400B85F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBDFF3972634476400B85F7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDFF3EA26344CF900B85F7C /* BuildFile in Frameworks */,
+				BBDFF3EA26344CF900B85F7C /* YumemiWeather in Frameworks */,
 				5BE5748ACD5735A59E83CA96 /* Pods_yumemi_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,7 +110,6 @@
 		BB06FE16263535FA00562776 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
-				BB06FE2C26356E8500562776 /* APIRequest.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -240,7 +237,6 @@
 				AD61998D3D0F1448DD4EDD5B /* Pods-yumemi-iosTests.debug.xcconfig */,
 				2E868CD5549C09FAC43774B2 /* Pods-yumemi-iosTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -263,7 +259,7 @@
 			);
 			name = "yumemi-ios";
 			packageProductDependencies = (
-				BBDFF3E926344CF900B85F7C /* SwiftPackageProductDependency */,
+				BBDFF3E926344CF900B85F7C /* YumemiWeather */,
 			);
 			productName = "yumemi-ios";
 			productReference = BBDFF3922634476400B85F7C /* yumemi-ios.app */;
@@ -340,7 +336,7 @@
 			);
 			mainGroup = BBDFF3892634476400B85F7C;
 			packageReferences = (
-				BBDFF3E826344CF900B85F7C /* RemoteSwiftPackageReference */,
+				BBDFF3E826344CF900B85F7C /* XCRemoteSwiftPackageReference "ios-training" */,
 			);
 			productRefGroup = BBDFF3932634476400B85F7C /* Products */;
 			projectDirPath = "";
@@ -492,7 +488,6 @@
 				BBDFF3962634476400B85F7C /* AppDelegate.swift in Sources */,
 				BBDFF3E426344C5700B85F7C /* WeatherViewController.swift in Sources */,
 				BB06FE202635674200562776 /* WeatherModel.swift in Sources */,
-				BB06FE2D26356E8500562776 /* APIRequest.swift in Sources */,
 				BBDFF3982634476400B85F7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -826,7 +821,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BBDFF3E826344CF900B85F7C /* RemoteSwiftPackageReference */ = {
+		BBDFF3E826344CF900B85F7C /* XCRemoteSwiftPackageReference "ios-training" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yumemi-inc/ios-training.git";
 			requirement = {
@@ -837,9 +832,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BBDFF3E926344CF900B85F7C /* SwiftPackageProductDependency */ = {
+		BBDFF3E926344CF900B85F7C /* YumemiWeather */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BBDFF3E826344CF900B85F7C /* RemoteSwiftPackageReference */;
+			package = BBDFF3E826344CF900B85F7C /* XCRemoteSwiftPackageReference "ios-training" */;
 			productName = YumemiWeather;
 		};
 /* End XCSwiftPackageProductDependency section */

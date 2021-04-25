@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import YumemiWeather
 
 protocol WeatherModelInput {
     func fetchWeather()
@@ -13,5 +14,8 @@ protocol WeatherModelInput {
 }
 
 class WeatherModel: WeatherModelInput {
-    func fetchWeather() {}
+
+    func fetchWeather() {
+        
+    }
 }

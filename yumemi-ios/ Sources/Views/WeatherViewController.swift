@@ -23,8 +23,12 @@ class WeatherViewController: UIViewController {
     }
 
     @IBAction func reloadButtonDidTapped(_ sender: Any) {
-        let weatherType = YumemiWeather.fetchWeather()
-        changeWeatherImageView(weatherType: weatherType)
+        do {
+            let weatherType = try YumemiWeather.fetchWeather(at: "tokyo")
+            changeWeatherImageView(weatherType: weatherType)
+        } catch(let error) {
+            showAlert(errorType: "\(error)", errorMessage: error.localizedDescription)
+        }
     }
 
     private func changeWeatherImageView(weatherType: String) {
@@ -41,6 +45,12 @@ class WeatherViewController: UIViewController {
         default:
             break
         }
+    }
+
+    private func showAlert(errorType: String, errorMessage: String) {
+        let alertViewController = UIAlertController(title: errorType, message: errorMessage, preferredStyle: .alert)
+        alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertViewController, animated: true, completion: nil)
     }
 }
 

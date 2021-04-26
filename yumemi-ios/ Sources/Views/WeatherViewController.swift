@@ -25,10 +25,13 @@ class WeatherViewController: UIViewController {
         switch weatherType {
         case "sunny":
             weatherImageView.image = UIImage(named: "sunny")
+            weatherImageView.tintColor = UIColor.red
         case "cloudy":
             weatherImageView.image = UIImage(named: "cloudy")
+            weatherImageView.tintColor = UIColor.gray
         case "rainy":
             weatherImageView.image = UIImage(named: "rainy")
+            weatherImageView.tintColor = UIColor.blue
         default:
             break
         }

@@ -24,14 +24,14 @@ class WeatherViewController: UIViewController {
     private func changeWeatherImageView(weatherType: String) {
         switch weatherType {
         case "sunny":
-            weatherImageView.image = UIImage(named: "sunny")
-            weatherImageView.tintColor = UIColor.red
+            weatherImageView.image = UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .red
         case "cloudy":
-            weatherImageView.image = UIImage(named: "cloudy")
-            weatherImageView.tintColor = UIColor.gray
+            weatherImageView.image = UIImage(named: "cloudy")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .gray
         case "rainy":
-            weatherImageView.image = UIImage(named: "rainy")
-            weatherImageView.tintColor = UIColor.blue
+            weatherImageView.image = UIImage(named: "rainy")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .blue
         default:
             break
         }

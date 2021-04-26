@@ -6,24 +6,34 @@
 //
 
 import UIKit
+import YumemiWeather
 
 class WeatherViewController: UIViewController {
 
+    @IBOutlet weak var weatherImageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func reloadButtonDidTapped(_ sender: Any) {
+        let weatherType = YumemiWeather.fetchWeather()
+        changeWeatherImageView(weatherType: weatherType)
     }
-    */
 
+    private func changeWeatherImageView(weatherType: String) {
+        switch weatherType {
+        case "sunny":
+            weatherImageView.image = UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .red
+        case "cloudy":
+            weatherImageView.image = UIImage(named: "cloudy")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .gray
+        case "rainy":
+            weatherImageView.image = UIImage(named: "rainy")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .blue
+        default:
+            break
+        }
+    }
 }

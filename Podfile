@@ -6,7 +6,8 @@ target 'yumemi-ios' do
   use_frameworks!
 
   # Pods for yumemi-ios
-  pod 'Alamofire', '~> 5.2'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'yumemi-iosTests' do
     inherit! :search_paths

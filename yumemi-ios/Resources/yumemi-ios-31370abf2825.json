@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "yumemi-ios",
+  "private_key_id": "31370abf28259030000144fbda7f8bbac0116b67",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCp+KUvzMgqzWAb\nO9Aqzp12RGCzK0ofAl3qP2ZOiuKu3GhmmyTZtGW6+bLvAgzDtft4c9zlJsiZFbY2\nbjxdys3CZW8uWezuac9/Vkv9YkfvAIZtKzamMtO+NhbTqGTnkuMqC49b1jD1HC5C\nfQa0dMjVkb8mX/swP76/1KhjsrXldlp3CaRIRTg8kr+cGnMcwzrkBNyN0bid0S1y\nx9pdVq3MXg/H5Z0nvOsfqYyZC0BuWei3Ss7apNwU+FSXu3ngLfCfv1/DjGGVBJFL\nZN3Su6c0HB1lSW4Cg8UWEx97qDmCwAnZfSAEAP/woT9H5Sv/WdCZ8V8FZRiMAAGR\nDCJg+zujAgMBAAECggEADlAFJB17xlO29Q24I/KnQo86Qu9K2/Boe7iZyW4oINta\n4Z3M05XXC/b8zbCzGUPYu7YRJfngrtHFa/3ww8eERHG8+mU3u1FaCxORBvKT5hjg\nOPWIZSRaI8xzZzocQEr99mUBmshSWEGAPIV0rBUHC5ATTYyL67svOWetELNUXjcF\nYgYN7J1Jsk0FKwRcl5h0wsq8HrvAQNWlgC2cDnj1rG8xhdHRDbpluV49Ra+fbVSs\nQs1fOrjhqd8w6ZCfVG1dsDWbGevUl+GNlbNSgHqyvR8hdyHxtGRmABJWNJf8hWeD\nQN+NL6148jl9FZVEJGe6BrWlrJbYXdXSaT6jNkZEaQKBgQDXkGhfn2bbmhNx1Px9\nxM3SZ5H3Eq12oehq2NDLbTjHkNofT9iXZFRztKACuOwYXyd6AT/yUzSzbbUBD5VZ\nD8g4YX+iUomD3jh2kRvOAbnQUZdPDSbjDJ3c9zarwk8BGzLWzGSAwkajhLLBkOAQ\nFtR233FwykbhdBpbQ6xvoru1PwKBgQDJ2tO0S5JCyZ2xxXNGm+zIKjwKlrYyY4vD\naq5Dh45ihrxqLsTdx2eG6dsl67ul0inemMwrosF/SBSTnXQfHSp+o5NpHEMu444z\nT6bSf/wh/K2/yzvcJxyP5T/b8/5LG9pliCfTVMp8Ddqc9908owJR4x05yXXh5HGC\nT5bEonnsnQKBgQC9IdHB3Fzl3pii7omeW7dunTqfej7B8Kq4XIVNhwYjav9GK8tQ\ngVHrtxYRbWiQtaQwUrplhgWeTGpchOy3mLZGaZ0PsbVAAxCtTwIDTNZYZc4JKPPu\nkFpNzoWkS7b/tHp1ph2kL1DFFZ+1X8SHuVAvADtLB98K3tBlNMotpK1nBwKBgH3a\nNtaZq5aCmBSHlCj4/LeMRaUgdHaUREbR09b8xJS/huf5Qvs34V9nnSBWiseHcl18\nDQhD0LroGRQ0PntLtvwARt9pJKYucLGjPtLNw0j5fucu8qJ/rDo3aApeZTU1J4TY\nUGRd4GVaSexGSiUNSVv+63DlH994jCEAOHNfDf+tAoGAAwjUl/DKZZDP2kP0l2xa\nYE/xgg9XXyCpru9YsvXy41ompLQ2wdBQ4b/QbzS/WntpRNUutEFk/fPmgG/lLbyD\naKxSEVsq2ylV2hLV4EEAqNnkea3JW+1A8QO3Fx2Wyby/XDT3mDqOlRbtq9s2GVSc\nSgCy/9+Y1mMn1ya8OVE0NB0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bitrise-yumemi-ios@yumemi-ios.iam.gserviceaccount.com",
+  "client_id": "103357257544460305897",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bitrise-yumemi-ios%40yumemi-ios.iam.gserviceaccount.com"
+}

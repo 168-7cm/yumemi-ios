@@ -12,13 +12,23 @@ class WeatherViewController: UIViewController {
 
     @IBOutlet weak var weatherImageView: UIImageView!
 
+    private var presenter: WeatherPresenterOutput!
+
+    func inject(presenter: WeatherPresenterOutput) {
+        self.presenter = presenter
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func reloadButtonDidTapped(_ sender: Any) {
-        let weatherType = YumemiWeather.fetchWeather()
-        changeWeatherImageView(weatherType: weatherType)
+        do {
+            let weatherType = try YumemiWeather.fetchWeather(at: "tokyo")
+            changeWeatherImageView(weatherType: weatherType)
+        } catch(let error) {
+            showAlert(errorType: "\(error)", errorMessage: error.localizedDescription)
+        }
     }
 
     private func changeWeatherImageView(weatherType: String) {
@@ -36,4 +46,14 @@ class WeatherViewController: UIViewController {
             break
         }
     }
+
+    private func showAlert(errorType: String, errorMessage: String) {
+        let alertViewController = UIAlertController(title: errorType, message: errorMessage, preferredStyle: .alert)
+        alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertViewController, animated: true, completion: nil)
+    }
+}
+
+extension WeatherViewController: WeatherPresenterOutput {
+
 }

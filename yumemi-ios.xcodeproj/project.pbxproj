@@ -298,6 +298,7 @@
 			buildConfigurationList = BBDFF3BC2634476600B85F7C /* Build configuration list for PBXNativeTarget "yumemi-ios" */;
 			buildPhases = (
 				AF73C9288DD51540AC6FFA74 /* [CP] Check Pods Manifest.lock */,
+				BB58864A263C4E9900C3DF84 /* ShellScript */,
 				BBDFF38E2634476400B85F7C /* Sources */,
 				BBDFF38F2634476400B85F7C /* Frameworks */,
 				BBDFF3902634476400B85F7C /* Resources */,
@@ -506,6 +507,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BB58864A263C4E9900C3DF84 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/yumemi-ios/Resources/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/yumemi-ios/Resources/R.generated.swift\"\n";
 		};
 		FA2E71CE320918A4405ED3FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

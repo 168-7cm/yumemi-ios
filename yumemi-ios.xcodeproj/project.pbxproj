@@ -12,9 +12,14 @@
 		A1168E00B4B06922B30B4D9B /* Pods_yumemi_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0CE4BC1C1132FDF0F80A2A /* Pods_yumemi_iosTests.framework */; };
 		BB06FE202635674200562776 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06FE1F2635674200562776 /* WeatherModel.swift */; };
 		BB06FE252635674C00562776 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06FE242635674C00562776 /* WeatherPresenter.swift */; };
+		BB588603263C4A0F00C3DF84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB588602263C4A0F00C3DF84 /* Localizable.strings */; };
+		BB58860C263C4A6400C3DF84 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58860B263C4A6400C3DF84 /* ViewBase.swift */; };
+		BB588614263C4B2F00C3DF84 /* PresenterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588613263C4B2F00C3DF84 /* PresenterBase.swift */; };
+		BB588619263C4B4700C3DF84 /* ViewControllerInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588618263C4B4700C3DF84 /* ViewControllerInstantiable.swift */; };
+		BB58861E263C4B6400C3DF84 /* PresenterInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58861D263C4B6400C3DF84 /* PresenterInstantiable.swift */; };
+		BB588624263C4BA000C3DF84 /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588623263C4BA000C3DF84 /* ViewControllerBase.swift */; };
 		BBC7125A2637F11500EEB71B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBC712592637F11500EEB71B /* GoogleService-Info.plist */; };
 		BBDFF3962634476400B85F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3952634476400B85F7C /* AppDelegate.swift */; };
-		BBDFF3982634476400B85F7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3972634476400B85F7C /* SceneDelegate.swift */; };
 		BBDFF39F2634476500B85F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDFF39E2634476500B85F7C /* Assets.xcassets */; };
 		BBDFF3A22634476500B85F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDFF3A02634476500B85F7C /* LaunchScreen.storyboard */; };
 		BBDFF3AD2634476600B85F7C /* yumemi_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3AC2634476600B85F7C /* yumemi_iosTests.swift */; };
@@ -51,10 +56,15 @@
 		AD61998D3D0F1448DD4EDD5B /* Pods-yumemi-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB06FE1F2635674200562776 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		BB06FE242635674C00562776 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
+		BB588602263C4A0F00C3DF84 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BB58860B263C4A6400C3DF84 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
+		BB588613263C4B2F00C3DF84 /* PresenterBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterBase.swift; sourceTree = "<group>"; };
+		BB588618263C4B4700C3DF84 /* ViewControllerInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInstantiable.swift; sourceTree = "<group>"; };
+		BB58861D263C4B6400C3DF84 /* PresenterInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInstantiable.swift; sourceTree = "<group>"; };
+		BB588623263C4BA000C3DF84 /* ViewControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBase.swift; sourceTree = "<group>"; };
 		BBC712592637F11500EEB71B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBDFF3922634476400B85F7C /* yumemi-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yumemi-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDFF3952634476400B85F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BBDFF3972634476400B85F7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BBDFF39E2634476500B85F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBDFF3A12634476500B85F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDFF3A32634476500B85F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,11 +119,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BB06FE16263535FA00562776 /* APIs */ = {
+		BB58860A263C4A4A00C3DF84 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				BB58860B263C4A6400C3DF84 /* ViewBase.swift */,
+				BB588613263C4B2F00C3DF84 /* PresenterBase.swift */,
+				BB588618263C4B4700C3DF84 /* ViewControllerInstantiable.swift */,
+				BB58861D263C4B6400C3DF84 /* PresenterInstantiable.swift */,
 			);
-			path = APIs;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BB588622263C4B8F00C3DF84 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BB588623263C4BA000C3DF84 /* ViewControllerBase.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BB588644263C4CA000C3DF84 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				BBDFF3E326344C5700B85F7C /* WeatherViewController.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		BB588645263C4CBD00C3DF84 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				BB06FE242635674C00562776 /* WeatherPresenter.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		BB588646263C4CCC00C3DF84 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				BB06FE1F2635674200562776 /* WeatherModel.swift */,
+			);
+			path = Weather;
 			sourceTree = "<group>";
 		};
 		BBDFF3892634476400B85F7C = {
@@ -169,11 +215,11 @@
 		BBDFF3CB26344AFE00B85F7C /*  Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BBDFF3CE26344B2300B85F7C /* AppDelegate */,
+				BB58860A263C4A4A00C3DF84 /* Protocols */,
 				BBDFF3CF26344B6E00B85F7C /* Models */,
 				BBDFF3D026344B7500B85F7C /* Views */,
 				BBDFF3D126344B7B00B85F7C /* Presenters */,
-				BB06FE16263535FA00562776 /* APIs */,
-				BBDFF3CE26344B2300B85F7C /* AppDelegate */,
 			);
 			path = " Sources";
 			sourceTree = "<group>";
@@ -184,6 +230,7 @@
 				BBDFF39E2634476500B85F7C /* Assets.xcassets */,
 				BBDFF3A32634476500B85F7C /* Info.plist */,
 				BBC712592637F11500EEB71B /* GoogleService-Info.plist */,
+				BB588602263C4A0F00C3DF84 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -201,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				BBDFF3952634476400B85F7C /* AppDelegate.swift */,
-				BBDFF3972634476400B85F7C /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -209,7 +255,7 @@
 		BBDFF3CF26344B6E00B85F7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BB06FE1F2635674200562776 /* WeatherModel.swift */,
+				BB588646263C4CCC00C3DF84 /* Weather */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,7 +263,8 @@
 		BBDFF3D026344B7500B85F7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BBDFF3E326344C5700B85F7C /* WeatherViewController.swift */,
+				BB588622263C4B8F00C3DF84 /* Base */,
+				BB588644263C4CA000C3DF84 /* Weather */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,7 +272,7 @@
 		BBDFF3D126344B7B00B85F7C /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				BB06FE242635674C00562776 /* WeatherPresenter.swift */,
+				BB588645263C4CBD00C3DF84 /* Weather */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -251,6 +298,7 @@
 			buildConfigurationList = BBDFF3BC2634476600B85F7C /* Build configuration list for PBXNativeTarget "yumemi-ios" */;
 			buildPhases = (
 				AF73C9288DD51540AC6FFA74 /* [CP] Check Pods Manifest.lock */,
+				BB58864A263C4E9900C3DF84 /* ShellScript */,
 				BBDFF38E2634476400B85F7C /* Sources */,
 				BBDFF38F2634476400B85F7C /* Frameworks */,
 				BBDFF3902634476400B85F7C /* Resources */,
@@ -357,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB588603263C4A0F00C3DF84 /* Localizable.strings in Resources */,
 				BBDFF3A22634476500B85F7C /* LaunchScreen.storyboard in Resources */,
 				BBC7125A2637F11500EEB71B /* GoogleService-Info.plist in Resources */,
 				BBDFF3D926344C3300B85F7C /* Weather.storyboard in Resources */,
@@ -459,6 +508,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BB58864A263C4E9900C3DF84 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/yumemi-ios/Resources/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/yumemi-ios/Resources/R.generated.swift\"\n";
+		};
 		FA2E71CE320918A4405ED3FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,10 +557,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB06FE252635674C00562776 /* WeatherPresenter.swift in Sources */,
+				BB588614263C4B2F00C3DF84 /* PresenterBase.swift in Sources */,
+				BB58860C263C4A6400C3DF84 /* ViewBase.swift in Sources */,
+				BB588619263C4B4700C3DF84 /* ViewControllerInstantiable.swift in Sources */,
+				BB58861E263C4B6400C3DF84 /* PresenterInstantiable.swift in Sources */,
 				BBDFF3962634476400B85F7C /* AppDelegate.swift in Sources */,
+				BB588624263C4BA000C3DF84 /* ViewControllerBase.swift in Sources */,
 				BBDFF3E426344C5700B85F7C /* WeatherViewController.swift in Sources */,
 				BB06FE202635674200562776 /* WeatherModel.swift in Sources */,
-				BBDFF3982634476400B85F7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

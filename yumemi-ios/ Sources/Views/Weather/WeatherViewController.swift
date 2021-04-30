@@ -8,14 +8,16 @@
 import UIKit
 import YumemiWeather
 
+protocol WeatherView: ViewBase {
+}
+
 class WeatherViewController: UIViewController {
 
     @IBOutlet weak var weatherImageView: UIImageView!
 
-    private var presenter: WeatherPresenterOutput!
-
-    func inject(presenter: WeatherPresenterOutput) {
-        self.presenter = presenter
+    typealias Dependency = Dependencies
+    struct Dependencies {
+        let presenter: WeatherPresenterType
     }
 
     override func viewDidLoad() {
@@ -52,8 +54,4 @@ class WeatherViewController: UIViewController {
         alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alertViewController, animated: true, completion: nil)
     }
-}
-
-extension WeatherViewController: WeatherPresenterOutput {
-
 }

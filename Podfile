@@ -8,6 +8,8 @@ target 'yumemi-ios' do
   # Pods for yumemi-ios
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'R.swift'
+  pod 'Toaster'
 
   target 'yumemi-iosTests' do
     inherit! :search_paths

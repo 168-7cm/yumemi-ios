@@ -11,7 +11,7 @@
         <!--Weather View Controller-->
         <scene sceneID="VMu-up-wjP">
             <objects>
-                <viewController id="ctR-2m-hPK" customClass="WeatherViewController" customModule="yumemi_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="weather" id="ctR-2m-hPK" customClass="WeatherViewController" customModule="yumemi_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FOV-HH-wA2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

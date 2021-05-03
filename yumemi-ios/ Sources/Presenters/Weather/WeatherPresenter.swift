@@ -21,3 +21,15 @@ final class WeatherPresenter {
     private weak var view: WeatherView?
     
 }
+
+extension WeatherPresenter: PresenterInstantiable {
+
+    func inject(with dependency: Dpendencies) -> Self {
+        self.view = dependency.view
+        return self
+    }
+}
+
+extension WeatherPresenter: WeatherPresenterType {
+    
+}

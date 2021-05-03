@@ -11,7 +11,7 @@ import YumemiWeather
 protocol WeatherView: ViewBase {
 }
 
-class WeatherViewController: UIViewController {
+final class WeatherViewController: UIViewController {
 
     @IBOutlet weak var weatherImageView: UIImageView!
 
@@ -19,6 +19,8 @@ class WeatherViewController: UIViewController {
     struct Dependencies {
         let presenter: WeatherPresenterType
     }
+
+    private var presenter: WeatherPresenterType?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,5 +55,21 @@ class WeatherViewController: UIViewController {
         let alertViewController = UIAlertController(title: errorType, message: errorMessage, preferredStyle: .alert)
         alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alertViewController, animated: true, completion: nil)
+    }
+}
+
+extension WeatherViewController: ViewControllerInstantiable {
+    static func instansiate() -> WeatherViewController {
+        return R.storyboard.weather.weather()!
+    }
+
+    func inject(with dependency: Dependencies) {
+        self.presenter = dependency.presenter
+    }
+} 
+
+extension WeatherViewController: WeatherView {
+
+    func showToast(message: String) {
     }
 }

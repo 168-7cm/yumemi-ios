@@ -18,6 +18,7 @@
 		BB588619263C4B4700C3DF84 /* ViewControllerInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588618263C4B4700C3DF84 /* ViewControllerInstantiable.swift */; };
 		BB58861E263C4B6400C3DF84 /* PresenterInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58861D263C4B6400C3DF84 /* PresenterInstantiable.swift */; };
 		BB588624263C4BA000C3DF84 /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588623263C4BA000C3DF84 /* ViewControllerBase.swift */; };
+		BB588655263C538000C3DF84 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588654263C538000C3DF84 /* R.generated.swift */; };
 		BBC7125A2637F11500EEB71B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBC712592637F11500EEB71B /* GoogleService-Info.plist */; };
 		BBDFF3962634476400B85F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3952634476400B85F7C /* AppDelegate.swift */; };
 		BBDFF39F2634476500B85F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDFF39E2634476500B85F7C /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		BB588618263C4B4700C3DF84 /* ViewControllerInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInstantiable.swift; sourceTree = "<group>"; };
 		BB58861D263C4B6400C3DF84 /* PresenterInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInstantiable.swift; sourceTree = "<group>"; };
 		BB588623263C4BA000C3DF84 /* ViewControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBase.swift; sourceTree = "<group>"; };
+		BB588654263C538000C3DF84 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		BBC712592637F11500EEB71B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBDFF3922634476400B85F7C /* yumemi-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yumemi-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDFF3952634476400B85F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				BBDFF3A32634476500B85F7C /* Info.plist */,
 				BBC712592637F11500EEB71B /* GoogleService-Info.plist */,
 				BB588602263C4A0F00C3DF84 /* Localizable.strings */,
+				BB588654263C538000C3DF84 /* R.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				BB58861E263C4B6400C3DF84 /* PresenterInstantiable.swift in Sources */,
 				BBDFF3962634476400B85F7C /* AppDelegate.swift in Sources */,
 				BB588624263C4BA000C3DF84 /* ViewControllerBase.swift in Sources */,
+				BB588655263C538000C3DF84 /* R.generated.swift in Sources */,
 				BBDFF3E426344C5700B85F7C /* WeatherViewController.swift in Sources */,
 				BB06FE202635674200562776 /* WeatherModel.swift in Sources */,
 			);

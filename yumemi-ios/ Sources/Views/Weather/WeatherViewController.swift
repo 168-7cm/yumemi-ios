@@ -14,11 +14,11 @@ protocol WeatherView: ViewBase {
     func showAlert(errorType: String, errorMessage: String)
 }
 
-final class WeatherViewController: UIViewController {
+final class WeatherViewController: ViewControllerBase {
 
-    @IBOutlet weak var weatherImageView: UIImageView!
-    @IBOutlet weak var maxTempLabel: UILabel!
-    @IBOutlet weak var minTempLabel: UILabel!
+    @IBOutlet private weak var weatherImageView: UIImageView!
+    @IBOutlet private weak var maxTempLabel: UILabel!
+    @IBOutlet private weak var minTempLabel: UILabel!
 
     typealias Dependency = Dependencies
     struct Dependencies {

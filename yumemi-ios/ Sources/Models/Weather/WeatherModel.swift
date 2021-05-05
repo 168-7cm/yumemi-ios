@@ -8,22 +8,22 @@
 import Foundation
 import YumemiWeather
 
-typealias WeatherResult = (_ weather: WeatherEntity?, _ error: Error?) -> Void
+typealias WeatherResult = (Result<WeatherEntity, Error>) -> ()
 
-protocol WeatherModelInput {
+protocol WeatherModelType {
     func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult)
 }
 
-class WeatherModel: WeatherModelInput {
+class WeatherModel: WeatherModelType {
 
     func fetchWeather(parameters: [String : String], completion: @escaping WeatherResult) {
         do {
             let json = changeToJsonString(parameters: parameters)
             let jsonString = try YumemiWeather.fetchWeather(json)
             let weatherEntity = changeToStruct(jsonString: jsonString)
-            completion(weatherEntity, nil)
+            completion(.success(weatherEntity))
         } catch(let error) {
-            completion(nil, error)
+            completion(.failure(error))
         }
     }
 

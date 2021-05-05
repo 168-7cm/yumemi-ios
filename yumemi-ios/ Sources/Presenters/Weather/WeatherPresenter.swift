@@ -17,11 +17,11 @@ final class WeatherPresenter {
     typealias Dependency = Dpendencies
     struct Dpendencies {
         let view: WeatherView
-        let model: WeatherModelInput
+        let model: WeatherModelType
     }
 
     private weak var view: WeatherView?
-    private var model: WeatherModelInput?
+    private var model: WeatherModelType?
     
 }
 
@@ -37,12 +37,13 @@ extension WeatherPresenter: PresenterInstantiable {
 extension WeatherPresenter: WeatherPresenterType {
     
     func fetchWeather(parameters: [String: String]) {
-        self.model?.fetchWeather(parameters: parameters) { (weatherEntity, error) in
-            if let weatherEntity = weatherEntity {
-                self.view?.changeWeatherImageView(weather: weatherEntity.weather)
-                self.view?.changeTemperatureLabel(maxTemp: weatherEntity.max_temp, minTemp: weatherEntity.min_temp)
-            } else {
-                self.view?.showAlert(errorType: "エラー", errorMessage: "データの取得に失敗しました")
+        self.model?.fetchWeather(parameters: parameters) { [weak self] (weatherResult) in
+            switch weatherResult {
+            case .success(let weatherEntity):
+                self?.view?.changeWeatherImageView(weather: weatherEntity.weather)
+                self?.view?.changeTemperatureLabel(maxTemp: weatherEntity.max_temp, minTemp: weatherEntity.min_temp)
+            case .failure:
+                self?.view?.showAlert(errorType: "エラー", errorMessage: "データの取得に失敗しました")
             }
         }
     }

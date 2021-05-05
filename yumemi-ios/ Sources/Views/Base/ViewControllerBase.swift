@@ -33,7 +33,8 @@ extension ViewControllerBase: ViewBase {
     func beginActivityIndicator() {
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        activityIndicator.style = UIActivityIndicatorView.Style.medium
+        activityIndicator.color = .gray
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         view.isUserInteractionEnabled = false

@@ -12,7 +12,7 @@
         <!--Weather View Controller-->
         <scene sceneID="VMu-up-wjP">
             <objects>
-                <viewController storyboardIdentifier="weather" id="ctR-2m-hPK" customClass="WeatherViewController" customModule="yumemi_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="weather" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ctR-2m-hPK" customClass="WeatherViewController" customModule="yumemi_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FOV-HH-wA2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,10 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xj-Qk-Uz6">
                                                 <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
-                                                <state key="normal" title="cancel"/>
+                                                <state key="normal" title="close"/>
+                                                <connections>
+                                                    <action selector="closeButtonDidTapped:" destination="ctR-2m-hPK" eventType="touchUpInside" id="ZKm-DX-LRV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-WA-vAk">
                                                 <rect key="frame" x="103.5" y="0.0" width="103.5" height="30"/>

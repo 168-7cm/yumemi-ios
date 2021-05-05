@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebase
         FirebaseApp.configure()
 
-        let viewController = WeatherViewController.instansiate()
-        let presenter = WeatherPresenter().inject(with: WeatherPresenter.Dependency(view: viewController, model: WeatherModel()))
-        viewController.inject(with: WeatherViewController.Dependency(presenter: presenter))
+        let viewController = InitialViewController.instansiate()
+        let presenter = InitialPresenter().inject(with: InitialPresenter.Dependency(view: viewController))
+        viewController.inject(with: InitialViewController.Dependency(presenter: presenter))
         self.window?.rootViewController = viewController
         return true
     }

@@ -35,6 +35,10 @@ final class WeatherViewController: ViewControllerBase {
     @IBAction func reloadButtonDidTapped(_ sender: Any) {
         self.presenter?.fetchWeather(parameters: parameters)
     }
+
+    @IBAction func closeButtonDidTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension WeatherViewController: ViewControllerInstantiable {

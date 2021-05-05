@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeatherEntity: Decodable {
+struct WeatherEntity: Codable {
     let weather: String
     let max_temp: Int
     let min_temp: Int

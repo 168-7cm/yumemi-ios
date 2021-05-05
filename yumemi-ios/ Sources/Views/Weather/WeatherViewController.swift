@@ -9,32 +9,48 @@ import UIKit
 import YumemiWeather
 
 protocol WeatherView: ViewBase {
+    func changeWeatherImageView(weather: String)
+    func changeTemperatureLabel(maxTemp: Int, minTemp: Int)
+    func showAlert(errorType: String, errorMessage: String)
 }
 
-class WeatherViewController: UIViewController {
+final class WeatherViewController: ViewControllerBase {
 
-    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet private weak var weatherImageView: UIImageView!
+    @IBOutlet private weak var maxTempLabel: UILabel!
+    @IBOutlet private weak var minTempLabel: UILabel!
 
     typealias Dependency = Dependencies
     struct Dependencies {
         let presenter: WeatherPresenterType
     }
 
+    private var presenter: WeatherPresenterType?
+    private let parameters = ["area": "tokyo", "date": "2020-04-01T12:00:00+09:00"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func reloadButtonDidTapped(_ sender: Any) {
-        do {
-            let weatherType = try YumemiWeather.fetchWeather(at: "tokyo")
-            changeWeatherImageView(weatherType: weatherType)
-        } catch(let error) {
-            showAlert(errorType: "\(error)", errorMessage: error.localizedDescription)
-        }
+        self.presenter?.fetchWeather(parameters: parameters)
+    }
+}
+
+extension WeatherViewController: ViewControllerInstantiable {
+    static func instansiate() -> WeatherViewController {
+        return R.storyboard.weather.weather()!
     }
 
-    private func changeWeatherImageView(weatherType: String) {
-        switch weatherType {
+    func inject(with dependency: Dependencies) {
+        self.presenter = dependency.presenter
+    }
+} 
+
+extension WeatherViewController: WeatherView {
+
+    func changeWeatherImageView(weather: String) {
+        switch weather {
         case "sunny":
             weatherImageView.image = UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate)
             weatherImageView.tintColor = .red
@@ -49,7 +65,12 @@ class WeatherViewController: UIViewController {
         }
     }
 
-    private func showAlert(errorType: String, errorMessage: String) {
+    func changeTemperatureLabel(maxTemp: Int, minTemp: Int) {
+        self.maxTempLabel.text = String(maxTemp)
+        self.minTempLabel.text = String(minTemp)
+    }
+
+    func showAlert(errorType: String, errorMessage: String) {
         let alertViewController = UIAlertController(title: errorType, message: errorMessage, preferredStyle: .alert)
         alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alertViewController, animated: true, completion: nil)

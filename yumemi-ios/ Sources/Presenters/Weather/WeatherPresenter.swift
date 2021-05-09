@@ -37,7 +37,11 @@ extension WeatherPresenter: PresenterInstantiable {
 extension WeatherPresenter: WeatherPresenterType {
     
     func fetchWeather(parameters: [String: String]) {
+        //ここ動かない
+        self.view?.beginActivityIndicator()
         self.model?.fetchWeather(parameters: parameters) { [weak self] (weatherResult) in
+            //ここ動く
+            self?.view?.endActivityIndicator()
             switch weatherResult {
             case .success(let weatherEntity):
                 self?.view?.changeWeatherImageView(weather: weatherEntity.weather)

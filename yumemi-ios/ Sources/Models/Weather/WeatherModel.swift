@@ -19,7 +19,7 @@ class WeatherModel: WeatherModelType {
     func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult) {
         do {
             let json = changeToJsonString(parameters: parameters)
-            let jsonString = try YumemiWeather.fetchWeather(json)
+            let jsonString = try YumemiWeather.syncFetchWeather(json)
             let weatherEntity = changeToStruct(jsonString: jsonString)
             completion(.success(weatherEntity))
         } catch(let error) {

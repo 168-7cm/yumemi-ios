@@ -218,6 +218,9 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - Cuckoo (1.5.0):
+    - Cuckoo/Swift (= 1.5.0)
+  - Cuckoo/Swift (1.5.0)
   - Firebase/Auth (7.11.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 7.11.0)
@@ -302,15 +305,20 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - Nimble (9.0.1)
   - PromisesObjC (1.2.12)
+  - Quick (3.1.2)
   - R.swift (5.4.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
   - Toaster (2.3.0)
 
 DEPENDENCIES:
+  - Cuckoo
   - Firebase/Auth
   - Firebase/Firestore
+  - Nimble
+  - Quick
   - R.swift
   - Toaster
 
@@ -318,6 +326,7 @@ SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
+    - Cuckoo
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -330,7 +339,9 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - Nimble
     - PromisesObjC
+    - Quick
     - R.swift
     - R.swift.Library
     - Toaster
@@ -338,6 +349,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  Cuckoo: 09ff1b7c6613b9c27dafea90702ca32208fe59d3
   Firebase: c121feb35e4126c0b355e3313fa9b487d47319fd
   FirebaseAuth: 5fe4585c2ed847319f0ea68bd1d82c77e49ff9a0
   FirebaseCore: 907447d8917a4d3eb0cce2829c5a0ad21d90b432
@@ -350,11 +362,13 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  Nimble: 7bed62ffabd6dbfe05f5925cbc43722533248990
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: ab326625ff631f7dde7300d41da604128accc01d
+PODFILE CHECKSUM: 8b71b77d02bb7e405643bf5c8444c65ee7b7feb5
 
 COCOAPODS: 1.10.0

@@ -6,28 +6,45 @@
 //
 
 import XCTest
+import Cuckoo
 @testable import yumemi_ios
 
 class yumemi_iosTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // presenterとmodelはMockクラスを使用
+    private var view: WeatherView!
+    private var presenter: WeatherMockPresenter!
+    private var model: WeatherMockModel!
+
+    // 各テストメソッドの実行時に呼ばれる。
+    override func setUp() {
+        self.view = WeatherViewController.instansiate()
+        self.model = WeatherMockModel()
+        self.presenter = WeatherMockPresenter().inject(with: WeatherMockPresenter.Dependencies(view: view, model: model))
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testSunnyWeather() {
+        let result = self.presenter.fetchWeather(weatherType: "sunny")
+        XCTAssertEqual(result, "sunny")
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCloudyWeahter() {
+        let result = self.presenter.fetchWeather(weatherType: "cloudy")
+        XCTAssertEqual(result, "cloudy")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testRainyWeahter() {
+        let result = self.presenter.fetchWeather(weatherType: "rainy")
+        XCTAssertEqual(result, "rainy")
     }
 
+    func testMaxTemperature() {
+        let result = self.presenter.fetchTemperature(temperature: "100")
+        XCTAssertEqual(result, "100")
+    }
+
+    func testMinTemperature() {
+        let result = self.presenter.fetchTemperature(temperature: "0")
+        XCTAssertEqual(result, "0")
+    }
 }

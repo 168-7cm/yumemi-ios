@@ -30,6 +30,11 @@ final class WeatherViewController: ViewControllerBase {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(viewWillEnterForeground), name: .foreground, object: nil)
+    }
+
+    @objc private func viewWillEnterForeground() {
+        self.presenter?.fetchWeather(parameters: parameters)
     }
 
     @IBAction func reloadButtonDidTapped(_ sender: Any) {

@@ -24,5 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = viewController
         return true
     }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        NotificationCenter.default.post(name: .foreground, object: nil)
+    }
 }
 

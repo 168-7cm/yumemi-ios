@@ -16,6 +16,7 @@
 		BB2D1DCA2642849000E7C980 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D1DC92642849000E7C980 /* InitialViewController.swift */; };
 		BB2D1DD22642861C00E7C980 /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2D1DD12642861C00E7C980 /* Initial.storyboard */; };
 		BB2D1DD72642881300E7C980 /* InitialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D1DD62642881300E7C980 /* InitialPresenter.swift */; };
+		BB2D1DFC2642EA4100E7C980 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D1DFB2642EA4100E7C980 /* Notification+Name.swift */; };
 		BB588603263C4A0F00C3DF84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB588602263C4A0F00C3DF84 /* Localizable.strings */; };
 		BB58860C263C4A6400C3DF84 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58860B263C4A6400C3DF84 /* ViewBase.swift */; };
 		BB588614263C4B2F00C3DF84 /* PresenterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588613263C4B2F00C3DF84 /* PresenterBase.swift */; };
@@ -65,6 +66,7 @@
 		BB2D1DC92642849000E7C980 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		BB2D1DD12642861C00E7C980 /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
 		BB2D1DD62642881300E7C980 /* InitialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
+		BB2D1DFB2642EA4100E7C980 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		BB588602263C4A0F00C3DF84 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BB58860B263C4A6400C3DF84 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
 		BB588613263C4B2F00C3DF84 /* PresenterBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterBase.swift; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
+		BB2D1DFA2642EA1A00E7C980 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BB2D1DFB2642EA4100E7C980 /* Notification+Name.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BB58860A263C4A4A00C3DF84 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +226,7 @@
 				BBDFF3CC26344B0800B85F7C /* Resources */,
 				BBDFF3CB26344AFE00B85F7C /*  Sources */,
 				BBDFF3CD26344B1200B85F7C /* Storyboards */,
+				BB2D1DFA2642EA1A00E7C980 /* Extension */,
 			);
 			path = "yumemi-ios";
 			sourceTree = "<group>";
@@ -599,6 +610,7 @@
 				BB2D1D4726417EC600E7C980 /* WeatherEntity.swift in Sources */,
 				BB588624263C4BA000C3DF84 /* ViewControllerBase.swift in Sources */,
 				BB588655263C538000C3DF84 /* R.generated.swift in Sources */,
+				BB2D1DFC2642EA4100E7C980 /* Notification+Name.swift in Sources */,
 				BBDFF3E426344C5700B85F7C /* WeatherViewController.swift in Sources */,
 				BB06FE202635674200562776 /* WeatherModel.swift in Sources */,
 			);
@@ -772,6 +784,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MTQ5H3G29;
 				INFOPLIST_FILE = "$(SRCROOT)/yumemi-ios/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -792,6 +805,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MTQ5H3G29;
 				INFOPLIST_FILE = "$(SRCROOT)/yumemi-ios/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -31,10 +31,6 @@ class WeatherPresenterTests: XCTestCase {
             }
         }
     }
-
-    func testSunnyWeahterView() {
-        self.view.changeWeatherImageView(weather: "sunny")
-    }
 }
 
 // WeahterModelのモック

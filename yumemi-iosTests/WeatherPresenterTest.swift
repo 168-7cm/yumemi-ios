@@ -15,7 +15,7 @@ class WeatherPresenterTests: XCTestCase {
     private var model: WeatherModelType!
 
     override func setUp() {
-        self.view = WeatherViewController.instansiate()
+        self.view = WeatherMockView()
         self.model = WeatherMockModel()
         self.presenter = WeatherPresenter().inject(with: WeatherPresenter.Dependency(view: self.view, model: self.model))
     }
@@ -25,12 +25,18 @@ class WeatherPresenterTests: XCTestCase {
             switch weatherResult {
             case .success(let weatherEntity):
                 XCTAssertEqual(weatherEntity.weather, "sunny")
+                self.view.changeWeatherImageView(weather: weatherEntity.weather)
             case .failure:
                 break
             }
         }
     }
+
+    func testSunnyWeahterView() {
+        self.view.changeWeatherImageView(weather: "sunny")
+    }
 }
+
 // WeahterModelのモック
 final class WeatherMockModel: WeatherModelType {
 
@@ -39,5 +45,27 @@ final class WeatherMockModel: WeatherModelType {
     // sunnyだけを返すモック
     func fetchWeather(parameters: [String : String], completion: @escaping WeatherResult) {
         completion(.success(weatherEntity))
+    }
+}
+
+// WeatherViewのモック
+final class WeatherMockView: WeatherView {
+    func showAlert(errorType: String, errorMessage: String) {
+    }
+
+    func showToast(message: String) {
+    }
+
+    func beginActivityIndicator() {
+    }
+
+    func endActivityIndicator() {
+    }
+
+    func changeWeatherImageView(weather: String) {
+        XCTAssertEqual(weather, "sunny")
+    }
+
+    func changeTemperatureLabel(maxTemp: Int, minTemp: Int) {
     }
 }

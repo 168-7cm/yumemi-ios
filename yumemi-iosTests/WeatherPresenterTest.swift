@@ -20,8 +20,8 @@ class WeatherPresenterTests: XCTestCase {
         self.presenter = WeatherPresenter().inject(with: WeatherPresenter.Dependency(view: self.view, model: self.model))
     }
 
-    func testSunnyWeather() {
-        self.model.fetchWeather(parameters: ["":""]) { (weatherResult) in
+    func testWeatherPresenter() {
+        self.model.fetchWeather(parameters: ["":""]) {(weatherResult) in
             switch weatherResult {
             case .success(let weatherEntity):
                 XCTAssertEqual(weatherEntity.weather, "sunny")
@@ -30,6 +30,10 @@ class WeatherPresenterTests: XCTestCase {
                 break
             }
         }
+    }
+
+    func testWeatherView() {
+        self.presenter.fetchWeather(parameters: ["":""])
     }
 }
 

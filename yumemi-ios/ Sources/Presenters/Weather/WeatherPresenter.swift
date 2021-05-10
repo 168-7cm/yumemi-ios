@@ -37,18 +37,18 @@ extension WeatherPresenter: PresenterInstantiable {
 extension WeatherPresenter: WeatherPresenterType {
     
     func fetchWeather(parameters: [String: String]) {
-            DispatchQueue.main.sync {
-                self.view?.beginActivityIndicator()
-                self.model?.fetchWeather(parameters: parameters) { [weak self] (weatherResult) in
-                    self?.view?.endActivityIndicator()
-                    switch weatherResult {
-                    case .success(let weatherEntity):
-                        self?.view?.changeWeatherImageView(weather: weatherEntity.weather)
-                        self?.view?.changeTemperatureLabel(maxTemp: weatherEntity.max_temp, minTemp: weatherEntity.min_temp)
-                    case .failure:
-                        self?.view?.showAlert(errorType: "エラー", errorMessage: "データの取得に失敗しました")
-                    }
+        self.view?.beginActivityIndicator()
+        DispatchQueue.main.async {
+            self.model?.fetchWeather(parameters: parameters) { [weak self] (weatherResult) in
+                self?.view?.endActivityIndicator()
+                switch weatherResult {
+                case .success(let weatherEntity):
+                    self?.view?.changeWeatherImageView(weather: weatherEntity.weather)
+                    self?.view?.changeTemperatureLabel(maxTemp: weatherEntity.max_temp, minTemp: weatherEntity.min_temp)
+                case .failure:
+                    self?.view?.showAlert(errorType: "エラー", errorMessage: "データの取得に失敗しました")
                 }
             }
         }
     }
+}

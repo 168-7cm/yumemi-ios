@@ -36,7 +36,7 @@ class WeatherPresenterTests: XCTestCase {
 // WeahterModelのモック
 final class WeatherMockModel: WeatherModelType {
 
-    // sunnyだけを返すモック
+    //「weather」と「temp」を返すモック
     func fetchWeather(parameters: [String: Any], completion: @escaping WeatherResult) {
         let weather = parameters["weather"] as? String ?? ""
         let max_temp = parameters["max_temp"] as? Int ?? 0

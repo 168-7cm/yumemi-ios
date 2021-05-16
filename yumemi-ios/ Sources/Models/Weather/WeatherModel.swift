@@ -11,12 +11,12 @@ import YumemiWeather
 typealias WeatherResult = (Result<WeatherEntity, Error>) -> ()
 
 protocol WeatherModelType {
-    func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult)
+    func fetchWeather(parameters: [String: Any], completion: @escaping WeatherResult)
 }
 
 class WeatherModel: WeatherModelType {
 
-    func fetchWeather(parameters: [String : String], completion: @escaping WeatherResult) {
+    func fetchWeather(parameters: [String : Any], completion: @escaping WeatherResult) {
         do {
             let json = changeToJsonString(parameters: parameters)
             let jsonString = try YumemiWeather.fetchWeather(json)
@@ -28,7 +28,7 @@ class WeatherModel: WeatherModelType {
     }
 
     // Dictionaryからjsonに変換
-    func changeToJsonString(parameters: [String: String]) -> String {
+    func changeToJsonString(parameters: [String: Any]) -> String {
         let jsonData = try! JSONSerialization.data(withJSONObject: parameters)
         let jsonString = String(bytes: jsonData, encoding: .utf8)
         return jsonString!

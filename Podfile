@@ -13,15 +13,9 @@ target 'yumemi-ios' do
 
   target 'yumemi-iosTests' do
     inherit! :search_paths
-    pod 'Quick'
-    pod 'Nimble'
-    pod "Cuckoo"
   end
 
   target 'yumemi-iosUITests' do
-    pod 'Quick'
-    pod 'Nimble'
-    pod "Cuckoo"
   end
 
 end

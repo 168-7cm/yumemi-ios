@@ -20,30 +20,28 @@ class WeatherPresenterTests: XCTestCase {
         self.presenter = WeatherPresenter().inject(with: WeatherPresenter.Dependency(view: self.view, model: self.model))
     }
 
-    func testWeatherPresenter() {
-        self.model.fetchWeather(parameters: ["":""]) {(weatherResult) in
-            switch weatherResult {
-            case .success(let weatherEntity):
-                XCTAssertEqual(weatherEntity.weather, "sunny")
-                self.view.changeWeatherImageView(weather: weatherEntity.weather)
-            case .failure:
-                break
-            }
-        }
+    func testSunnyWeatherView() {
+        self.presenter.fetchWeather(parameters: ["weather":"sunny","max_temp": 100, "min_temp": 0])
     }
 
-    func testWeatherView() {
-        self.presenter.fetchWeather(parameters: ["":""])
+    func testCloudyWeahterView() {
+        self.presenter.fetchWeather(parameters: ["weather": "cloudy", "max_temp": 100, "min_temp": 0])
+    }
+
+    func testRainyWeatherView() {
+        self.presenter.fetchWeather(parameters: ["weather": "rainy", "max_temp": 100, "min_temp": 0])
     }
 }
 
 // WeahterModelのモック
 final class WeatherMockModel: WeatherModelType {
 
-    let weatherEntity = WeatherEntity(weather: "sunny", max_temp: 100, min_temp: 0, date: "2020-04-01T12:00:00+09:00")
-
     // sunnyだけを返すモック
-    func fetchWeather(parameters: [String : String], completion: @escaping WeatherResult) {
+    func fetchWeather(parameters: [String: Any], completion: @escaping WeatherResult) {
+        let weather = parameters["weather"] as? String ?? ""
+        let max_temp = parameters["max_temp"] as? Int ?? 0
+        let min_temp = parameters["min_temp"] as? Int ?? 100
+        let weatherEntity = WeatherEntity(weather: weather, max_temp: max_temp, min_temp: min_temp, date: "2020-04-01T12:00:00+09:00")
         completion(.success(weatherEntity))
     }
 }
@@ -63,9 +61,20 @@ final class WeatherMockView: WeatherView {
     }
 
     func changeWeatherImageView(weather: String) {
-        XCTAssertEqual(weather, "sunny")
+        switch weather {
+        case "sunny":
+            XCTAssertEqual(weather, "sunny")
+        case "cloudy":
+            XCTAssertEqual(weather, "cloudy")
+        case "rainy":
+            XCTAssertEqual(weather, "rainy")
+        default:
+            XCTFail()
+        }
     }
 
     func changeTemperatureLabel(maxTemp: Int, minTemp: Int) {
+        XCTAssertEqual(maxTemp, 100)
+        XCTAssertEqual(minTemp, 0)
     }
 }

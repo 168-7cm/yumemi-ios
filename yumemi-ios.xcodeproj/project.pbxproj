@@ -24,8 +24,6 @@
 		BB58861E263C4B6400C3DF84 /* PresenterInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58861D263C4B6400C3DF84 /* PresenterInstantiable.swift */; };
 		BB588624263C4BA000C3DF84 /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588623263C4BA000C3DF84 /* ViewControllerBase.swift */; };
 		BB588655263C538000C3DF84 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588654263C538000C3DF84 /* R.generated.swift */; };
-		BBB106AB2646C460003E9D08 /* Cuckoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB106AA2646C460003E9D08 /* Cuckoo.framework */; };
-		BBB106AD2646C46B003E9D08 /* Cuckoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB106AC2646C46B003E9D08 /* Cuckoo.framework */; };
 		BBB107812647FB1B003E9D08 /* WeatherPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB107802647FB1B003E9D08 /* WeatherPresenterTest.swift */; };
 		BBC7125A2637F11500EEB71B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBC712592637F11500EEB71B /* GoogleService-Info.plist */; };
 		BBDFF3962634476400B85F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3952634476400B85F7C /* AppDelegate.swift */; };
@@ -111,7 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBB106AB2646C460003E9D08 /* Cuckoo.framework in Frameworks */,
 				A1168E00B4B06922B30B4D9B /* Pods_yumemi_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBB106AD2646C46B003E9D08 /* Cuckoo.framework in Frameworks */,
 				8445F05630191FE7710D62FC /* Pods_yumemi_ios_yumemi_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,11 +369,9 @@
 			buildConfigurationList = BBDFF3BF2634476600B85F7C /* Build configuration list for PBXNativeTarget "yumemi-iosTests" */;
 			buildPhases = (
 				FA2E71CE320918A4405ED3FF /* [CP] Check Pods Manifest.lock */,
-				BB2D1F6F2643CFAA00E7C980 /* ShellScript */,
 				BBDFF3A42634476600B85F7C /* Sources */,
 				BBDFF3A52634476600B85F7C /* Frameworks */,
 				BBDFF3A62634476600B85F7C /* Resources */,
-				5DF4424E3DC15600861238B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -394,7 +388,6 @@
 			buildConfigurationList = BBDFF3C22634476600B85F7C /* Build configuration list for PBXNativeTarget "yumemi-iosUITests" */;
 			buildPhases = (
 				37DA54B36AF5B1662272A6F2 /* [CP] Check Pods Manifest.lock */,
-				BB2D1F702643CFBA00E7C980 /* ShellScript */,
 				BBDFF3AF2634476600B85F7C /* Sources */,
 				BBDFF3B02634476600B85F7C /* Frameworks */,
 				BBDFF3B12634476600B85F7C /* Resources */,
@@ -508,23 +501,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5DF4424E3DC15600861238B2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AC1550577ACB5DA42F4CF44C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,40 +556,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		BB2D1F6F2643CFAA00E7C980 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Sources/Presenters/Weather/WeatherPresenter.swift\" \\\n\n\n";
-		};
-		BB2D1F702643CFBA00E7C980 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Sources/Presenters/Weather/WeatherPresenter.swift\" \\\n\n";
 		};
 		BB58864A263C4E9900C3DF84 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

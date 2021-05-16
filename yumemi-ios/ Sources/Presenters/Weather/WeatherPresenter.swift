@@ -8,7 +8,7 @@
 import Foundation
 
 protocol WeatherPresenterType: PresenterBase {
-    func fetchWeather(parameters: [String: Any])
+    func fetchWeather(parameters: [String: String])
 }
 
 final class WeatherPresenter {
@@ -36,7 +36,7 @@ extension WeatherPresenter: PresenterInstantiable {
 
 extension WeatherPresenter: WeatherPresenterType {
     
-    func fetchWeather(parameters: [String: Any]) {
+    func fetchWeather(parameters: [String: String]) {
         self.model?.fetchWeather(parameters: parameters) { [weak self] (weatherResult) in
             switch weatherResult {
             case .success(let weatherEntity):

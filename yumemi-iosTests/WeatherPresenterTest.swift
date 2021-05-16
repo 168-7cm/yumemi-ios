@@ -14,22 +14,31 @@ class WeatherPresenterTests: XCTestCase {
     private var presenter: WeatherPresenterType!
     private var model: WeatherModelType!
 
-    override func setUp() {
-        self.view = WeatherMockView()
+//    override func setUp() {
+//        self.view = WeatherMockView(targetWeather: "sunny", max_temp: 100, min_temp: 0)
+//        self.model = WeatherMockModel()
+//        self.presenter = WeatherPresenter().inject(with: WeatherPresenter.Dependency(view: self.view, model: self.model))
+//    }
+
+    func setup(targetWeather: String, max_temp: Int, min_temp: Int) {
+        self.view = WeatherMockView(targetWeather: targetWeather, max_temp: max_temp, min_temp: min_temp)
         self.model = WeatherMockModel()
         self.presenter = WeatherPresenter().inject(with: WeatherPresenter.Dependency(view: self.view, model: self.model))
     }
 
     func testSunnyWeatherView() {
-        self.presenter.fetchWeather(parameters: ["weather":"sunny","max_temp": 100, "min_temp": 0])
+        self.setup(targetWeather: "sunny", max_temp: 100, min_temp: 0)
+        self.presenter.fetchWeather(parameters: ["weather":"sunny", "max_temp": "100", "min_temp": "0"])
     }
 
     func testCloudyWeahterView() {
-        self.presenter.fetchWeather(parameters: ["weather": "cloudy", "max_temp": 100, "min_temp": 0])
+        self.setup(targetWeather: "cloudy", max_temp: 100, min_temp: 0)
+        self.presenter.fetchWeather(parameters: ["weather": "cloudy", "max_temp": "100", "min_temp": "0"])
     }
 
     func testRainyWeatherView() {
-        self.presenter.fetchWeather(parameters: ["weather": "rainy", "max_temp": 100, "min_temp": 0])
+        self.setup(targetWeather: "rainy", max_temp: 100, min_temp: 0)
+        self.presenter.fetchWeather(parameters: ["weather": "rainy", "max_temp": "100", "min_temp": "0"])
     }
 }
 
@@ -37,10 +46,10 @@ class WeatherPresenterTests: XCTestCase {
 final class WeatherMockModel: WeatherModelType {
 
     //「weather」と「temp」を返すモック
-    func fetchWeather(parameters: [String: Any], completion: @escaping WeatherResult) {
-        let weather = parameters["weather"] as? String ?? ""
-        let max_temp = parameters["max_temp"] as? Int ?? 0
-        let min_temp = parameters["min_temp"] as? Int ?? 100
+    func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult) {
+        let weather = parameters["weather"] as! String
+        let max_temp = Int(parameters["max_temp"]!)!
+        let min_temp = Int(parameters["min_temp"]!)!
         let weatherEntity = WeatherEntity(weather: weather, max_temp: max_temp, min_temp: min_temp, date: "2020-04-01T12:00:00+09:00")
         completion(.success(weatherEntity))
     }
@@ -48,6 +57,17 @@ final class WeatherMockModel: WeatherModelType {
 
 // WeatherViewのモック
 final class WeatherMockView: WeatherView {
+
+    private var targetWeather: String?
+    private var max_temp: Int?
+    private var min_temp: Int?
+
+    init(targetWeather: String, max_temp: Int, min_temp: Int) {
+        self.targetWeather = targetWeather
+        self.max_temp = max_temp
+        self.min_temp = min_temp
+    }
+
     func showAlert(errorType: String, errorMessage: String) {
     }
 
@@ -61,20 +81,11 @@ final class WeatherMockView: WeatherView {
     }
 
     func changeWeatherImageView(weather: String) {
-        switch weather {
-        case "sunny":
-            XCTAssertEqual(weather, "sunny")
-        case "cloudy":
-            XCTAssertEqual(weather, "cloudy")
-        case "rainy":
-            XCTAssertEqual(weather, "rainy")
-        default:
-            XCTFail()
-        }
+        XCTAssertEqual(targetWeather, weather)
     }
 
     func changeTemperatureLabel(maxTemp: Int, minTemp: Int) {
-        XCTAssertEqual(maxTemp, 100)
-        XCTAssertEqual(minTemp, 0)
+        XCTAssertEqual(max_temp, maxTemp)
+        XCTAssertEqual(min_temp, minTemp)
     }
 }

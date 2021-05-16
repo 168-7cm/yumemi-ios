@@ -11,12 +11,12 @@ import YumemiWeather
 typealias WeatherResult = (Result<WeatherEntity, Error>) -> ()
 
 protocol WeatherModelType {
-    func fetchWeather(parameters: [String: Any], completion: @escaping WeatherResult)
+    func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult)
 }
 
 class WeatherModel: WeatherModelType {
 
-    func fetchWeather(parameters: [String : Any], completion: @escaping WeatherResult) {
+    func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult) {
         do {
             let json = changeToJsonString(parameters: parameters)
             let jsonString = try YumemiWeather.fetchWeather(json)

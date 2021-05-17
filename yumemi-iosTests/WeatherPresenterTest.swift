@@ -47,7 +47,7 @@ final class WeatherMockModel: WeatherModelType {
 
     //「weather」と「temp」を返すモック
     func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult) {
-        let weather = parameters["weather"] as! String
+        let weather = parameters["weather"]!
         let max_temp = Int(parameters["max_temp"]!)!
         let min_temp = Int(parameters["min_temp"]!)!
         let weatherEntity = WeatherEntity(weather: weather, max_temp: max_temp, min_temp: min_temp, date: "2020-04-01T12:00:00+09:00")

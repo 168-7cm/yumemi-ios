@@ -13,11 +13,9 @@ target 'yumemi-ios' do
 
   target 'yumemi-iosTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
   target 'yumemi-iosUITests' do
-    # Pods for testing
   end
 
 end

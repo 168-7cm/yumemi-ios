@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5BE5748ACD5735A59E83CA96 /* Pods_yumemi_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B93E6FD93D2DCC518C0A717 /* Pods_yumemi_ios.framework */; };
-		8445F05630191FE7710D62FC /* Pods_yumemi_ios_yumemi_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40449A48FF3D9B72AD175B4 /* Pods_yumemi_ios_yumemi_iosUITests.framework */; };
-		A1168E00B4B06922B30B4D9B /* Pods_yumemi_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0CE4BC1C1132FDF0F80A2A /* Pods_yumemi_iosTests.framework */; };
+		384BAEF8950C45E6D1CAA663 /* Pods_yumemi_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F085FB73E8E6C03E0C48FF /* Pods_yumemi_iosTests.framework */; };
+		6A4D34BE29FBFEE31E6B4653 /* Pods_yumemi_ios_yumemi_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAD6B1E3DABAC1A866B1316 /* Pods_yumemi_ios_yumemi_iosUITests.framework */; };
+		A428C672FDFF5F5633074BF2 /* Pods_yumemi_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1695D70865B6D61DF7D6D9 /* Pods_yumemi_ios.framework */; };
 		BB06FE202635674200562776 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06FE1F2635674200562776 /* WeatherModel.swift */; };
 		BB06FE252635674C00562776 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06FE242635674C00562776 /* WeatherPresenter.swift */; };
 		BB2D1D4726417EC600E7C980 /* WeatherEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D1D4626417EC600E7C980 /* WeatherEntity.swift */; };
@@ -24,15 +24,15 @@
 		BB58861E263C4B6400C3DF84 /* PresenterInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58861D263C4B6400C3DF84 /* PresenterInstantiable.swift */; };
 		BB588624263C4BA000C3DF84 /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588623263C4BA000C3DF84 /* ViewControllerBase.swift */; };
 		BB588655263C538000C3DF84 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588654263C538000C3DF84 /* R.generated.swift */; };
+		BBB107812647FB1B003E9D08 /* WeatherPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB107802647FB1B003E9D08 /* WeatherPresenterTest.swift */; };
 		BBC7125A2637F11500EEB71B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBC712592637F11500EEB71B /* GoogleService-Info.plist */; };
 		BBDFF3962634476400B85F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3952634476400B85F7C /* AppDelegate.swift */; };
 		BBDFF39F2634476500B85F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDFF39E2634476500B85F7C /* Assets.xcassets */; };
 		BBDFF3A22634476500B85F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDFF3A02634476500B85F7C /* LaunchScreen.storyboard */; };
-		BBDFF3AD2634476600B85F7C /* yumemi_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3AC2634476600B85F7C /* yumemi_iosTests.swift */; };
 		BBDFF3B82634476600B85F7C /* yumemi_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3B72634476600B85F7C /* yumemi_iosUITests.swift */; };
 		BBDFF3D926344C3300B85F7C /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDFF3D826344C3200B85F7C /* Weather.storyboard */; };
 		BBDFF3E426344C5700B85F7C /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFF3E326344C5700B85F7C /* WeatherViewController.swift */; };
-		BBDFF3EA26344CF900B85F7C /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = BBDFF3E926344CF900B85F7C /* YumemiWeather */; };
+		BBDFF3EA26344CF900B85F7C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = BBDFF3E926344CF900B85F7C /* SwiftPackageProductDependency */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E868CD5549C09FAC43774B2 /* Pods-yumemi-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-iosTests.release.xcconfig"; path = "Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests.release.xcconfig"; sourceTree = "<group>"; };
-		34CCC9135B5F9E6192A81998 /* Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5FA5B5799FD3C1421E0C367A /* Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
-		8B93E6FD93D2DCC518C0A717 /* Pods_yumemi_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yumemi_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		90440060686D2166DD0A7479 /* Pods-yumemi-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-ios.release.xcconfig"; path = "Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios.release.xcconfig"; sourceTree = "<group>"; };
-		AC0CE4BC1C1132FDF0F80A2A /* Pods_yumemi_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yumemi_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD61998D3D0F1448DD4EDD5B /* Pods-yumemi-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F5A7C5935ADF28D0A8A629A /* Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		12AF28E376C90CDAE7D849F4 /* Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3245E113A9D27095A8AA2D4C /* Pods-yumemi-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-iosTests.release.xcconfig"; path = "Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		50F085FB73E8E6C03E0C48FF /* Pods_yumemi_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yumemi_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56DAAB4CFB33016C57E2A704 /* Pods-yumemi-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-ios.release.xcconfig"; path = "Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios.release.xcconfig"; sourceTree = "<group>"; };
+		AAB882A550CF76BBBAA27A25 /* Pods-yumemi-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-yumemi-iosTests/Pods-yumemi-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B434C9ECB7B1BE3040947408 /* Pods-yumemi-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-ios.debug.xcconfig"; path = "Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		BB06FE1F2635674200562776 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		BB06FE242635674C00562776 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 		BB2D1D4626417EC600E7C980 /* WeatherEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntity.swift; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 		BB2D1DD12642861C00E7C980 /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
 		BB2D1DD62642881300E7C980 /* InitialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
 		BB2D1DFB2642EA4100E7C980 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+		BB2D1EF02643CA7F00E7C980 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB588602263C4A0F00C3DF84 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BB58860B263C4A6400C3DF84 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
 		BB588613263C4B2F00C3DF84 /* PresenterBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterBase.swift; sourceTree = "<group>"; };
@@ -74,6 +75,9 @@
 		BB58861D263C4B6400C3DF84 /* PresenterInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInstantiable.swift; sourceTree = "<group>"; };
 		BB588623263C4BA000C3DF84 /* ViewControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBase.swift; sourceTree = "<group>"; };
 		BB588654263C538000C3DF84 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		BBB106AA2646C460003E9D08 /* Cuckoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cuckoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB106AC2646C46B003E9D08 /* Cuckoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cuckoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB107802647FB1B003E9D08 /* WeatherPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenterTest.swift; sourceTree = "<group>"; };
 		BBC712592637F11500EEB71B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBDFF3922634476400B85F7C /* yumemi-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yumemi-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDFF3952634476400B85F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,15 +85,14 @@
 		BBDFF3A12634476500B85F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDFF3A32634476500B85F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDFF3A82634476600B85F7C /* yumemi-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yumemi-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBDFF3AC2634476600B85F7C /* yumemi_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yumemi_iosTests.swift; sourceTree = "<group>"; };
 		BBDFF3AE2634476600B85F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDFF3B32634476600B85F7C /* yumemi-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yumemi-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDFF3B72634476600B85F7C /* yumemi_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yumemi_iosUITests.swift; sourceTree = "<group>"; };
 		BBDFF3B92634476600B85F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDFF3D826344C3200B85F7C /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		BBDFF3E326344C5700B85F7C /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		DC19EED911D2ADEF32804168 /* Pods-yumemi-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yumemi-ios.debug.xcconfig"; path = "Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		F40449A48FF3D9B72AD175B4 /* Pods_yumemi_ios_yumemi_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yumemi_ios_yumemi_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAD6B1E3DABAC1A866B1316 /* Pods_yumemi_ios_yumemi_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yumemi_ios_yumemi_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1695D70865B6D61DF7D6D9 /* Pods_yumemi_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yumemi_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDFF3EA26344CF900B85F7C /* YumemiWeather in Frameworks */,
-				5BE5748ACD5735A59E83CA96 /* Pods_yumemi_ios.framework in Frameworks */,
+				BBDFF3EA26344CF900B85F7C /* BuildFile in Frameworks */,
+				A428C672FDFF5F5633074BF2 /* Pods_yumemi_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1168E00B4B06922B30B4D9B /* Pods_yumemi_iosTests.framework in Frameworks */,
+				384BAEF8950C45E6D1CAA663 /* Pods_yumemi_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8445F05630191FE7710D62FC /* Pods_yumemi_ios_yumemi_iosUITests.framework in Frameworks */,
+				6A4D34BE29FBFEE31E6B4653 /* Pods_yumemi_ios_yumemi_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,9 +127,12 @@
 		B2276BA08AAFD5C41916AA59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8B93E6FD93D2DCC518C0A717 /* Pods_yumemi_ios.framework */,
-				F40449A48FF3D9B72AD175B4 /* Pods_yumemi_ios_yumemi_iosUITests.framework */,
-				AC0CE4BC1C1132FDF0F80A2A /* Pods_yumemi_iosTests.framework */,
+				BBB106AC2646C46B003E9D08 /* Cuckoo.framework */,
+				BBB106AA2646C460003E9D08 /* Cuckoo.framework */,
+				BB2D1EF02643CA7F00E7C980 /* Quick.framework */,
+				FA1695D70865B6D61DF7D6D9 /* Pods_yumemi_ios.framework */,
+				CEAD6B1E3DABAC1A866B1316 /* Pods_yumemi_ios_yumemi_iosUITests.framework */,
+				50F085FB73E8E6C03E0C48FF /* Pods_yumemi_iosTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,8 +240,8 @@
 		BBDFF3AB2634476600B85F7C /* yumemi-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				BBDFF3AC2634476600B85F7C /* yumemi_iosTests.swift */,
 				BBDFF3AE2634476600B85F7C /* Info.plist */,
+				BBB107802647FB1B003E9D08 /* WeatherPresenterTest.swift */,
 			);
 			path = "yumemi-iosTests";
 			sourceTree = "<group>";
@@ -322,12 +328,12 @@
 		FEED8ED3820F170B4AC65038 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DC19EED911D2ADEF32804168 /* Pods-yumemi-ios.debug.xcconfig */,
-				90440060686D2166DD0A7479 /* Pods-yumemi-ios.release.xcconfig */,
-				34CCC9135B5F9E6192A81998 /* Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig */,
-				5FA5B5799FD3C1421E0C367A /* Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig */,
-				AD61998D3D0F1448DD4EDD5B /* Pods-yumemi-iosTests.debug.xcconfig */,
-				2E868CD5549C09FAC43774B2 /* Pods-yumemi-iosTests.release.xcconfig */,
+				B434C9ECB7B1BE3040947408 /* Pods-yumemi-ios.debug.xcconfig */,
+				56DAAB4CFB33016C57E2A704 /* Pods-yumemi-ios.release.xcconfig */,
+				0F5A7C5935ADF28D0A8A629A /* Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig */,
+				12AF28E376C90CDAE7D849F4 /* Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig */,
+				AAB882A550CF76BBBAA27A25 /* Pods-yumemi-iosTests.debug.xcconfig */,
+				3245E113A9D27095A8AA2D4C /* Pods-yumemi-iosTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -339,12 +345,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBDFF3BC2634476600B85F7C /* Build configuration list for PBXNativeTarget "yumemi-ios" */;
 			buildPhases = (
-				AF73C9288DD51540AC6FFA74 /* [CP] Check Pods Manifest.lock */,
+				4D3E073D717C27FAEA335D62 /* [CP] Check Pods Manifest.lock */,
 				BB58864A263C4E9900C3DF84 /* ShellScript */,
 				BBDFF38E2634476400B85F7C /* Sources */,
 				BBDFF38F2634476400B85F7C /* Frameworks */,
 				BBDFF3902634476400B85F7C /* Resources */,
-				BA687C18BD78565EF5C27579 /* [CP] Embed Pods Frameworks */,
+				077FBC80A57D25F7FD25347E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,7 +358,7 @@
 			);
 			name = "yumemi-ios";
 			packageProductDependencies = (
-				BBDFF3E926344CF900B85F7C /* YumemiWeather */,
+				BBDFF3E926344CF900B85F7C /* SwiftPackageProductDependency */,
 			);
 			productName = "yumemi-ios";
 			productReference = BBDFF3922634476400B85F7C /* yumemi-ios.app */;
@@ -362,7 +368,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBDFF3BF2634476600B85F7C /* Build configuration list for PBXNativeTarget "yumemi-iosTests" */;
 			buildPhases = (
-				FA2E71CE320918A4405ED3FF /* [CP] Check Pods Manifest.lock */,
+				70EFAFFD5BAABF41DA7FB7C5 /* [CP] Check Pods Manifest.lock */,
 				BBDFF3A42634476600B85F7C /* Sources */,
 				BBDFF3A52634476600B85F7C /* Frameworks */,
 				BBDFF3A62634476600B85F7C /* Resources */,
@@ -381,11 +387,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBDFF3C22634476600B85F7C /* Build configuration list for PBXNativeTarget "yumemi-iosUITests" */;
 			buildPhases = (
-				37DA54B36AF5B1662272A6F2 /* [CP] Check Pods Manifest.lock */,
+				0B6A889BD62438B2A6B700BC /* [CP] Check Pods Manifest.lock */,
 				BBDFF3AF2634476600B85F7C /* Sources */,
 				BBDFF3B02634476600B85F7C /* Frameworks */,
 				BBDFF3B12634476600B85F7C /* Resources */,
-				AC1550577ACB5DA42F4CF44C /* [CP] Embed Pods Frameworks */,
+				EE1E8E4ED4F7F41DCA1C98BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -429,7 +435,7 @@
 			);
 			mainGroup = BBDFF3892634476400B85F7C;
 			packageReferences = (
-				BBDFF3E826344CF900B85F7C /* XCRemoteSwiftPackageReference "ios-training" */,
+				BBDFF3E826344CF900B85F7C /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = BBDFF3932634476400B85F7C /* Products */;
 			projectDirPath = "";
@@ -473,7 +479,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		37DA54B36AF5B1662272A6F2 /* [CP] Check Pods Manifest.lock */ = {
+		077FBC80A57D25F7FD25347E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B6A889BD62438B2A6B700BC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -495,24 +518,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC1550577ACB5DA42F4CF44C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF73C9288DD51540AC6FFA74 /* [CP] Check Pods Manifest.lock */ = {
+		4D3E073D717C27FAEA335D62 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,21 +540,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BA687C18BD78565EF5C27579 /* [CP] Embed Pods Frameworks */ = {
+		70EFAFFD5BAABF41DA7FB7C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yumemi-iosTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios/Pods-yumemi-ios-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB58864A263C4E9900C3DF84 /* ShellScript */ = {
@@ -570,26 +581,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/yumemi-ios/Resources/R.generated.swift\"\n";
 		};
-		FA2E71CE320918A4405ED3FF /* [CP] Check Pods Manifest.lock */ = {
+		EE1E8E4ED4F7F41DCA1C98BA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-yumemi-iosTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yumemi-ios-yumemi-iosUITests/Pods-yumemi-ios-yumemi-iosUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -620,7 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDFF3AD2634476600B85F7C /* yumemi_iosTests.swift in Sources */,
+				BBB107812647FB1B003E9D08 /* WeatherPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,7 +783,7 @@
 		};
 		BBDFF3BD2634476600B85F7C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC19EED911D2ADEF32804168 /* Pods-yumemi-ios.debug.xcconfig */;
+			baseConfigurationReference = B434C9ECB7B1BE3040947408 /* Pods-yumemi-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -798,7 +804,7 @@
 		};
 		BBDFF3BE2634476600B85F7C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90440060686D2166DD0A7479 /* Pods-yumemi-ios.release.xcconfig */;
+			baseConfigurationReference = 56DAAB4CFB33016C57E2A704 /* Pods-yumemi-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -819,7 +825,7 @@
 		};
 		BBDFF3C02634476600B85F7C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD61998D3D0F1448DD4EDD5B /* Pods-yumemi-iosTests.debug.xcconfig */;
+			baseConfigurationReference = AAB882A550CF76BBBAA27A25 /* Pods-yumemi-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -842,7 +848,7 @@
 		};
 		BBDFF3C12634476600B85F7C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E868CD5549C09FAC43774B2 /* Pods-yumemi-iosTests.release.xcconfig */;
+			baseConfigurationReference = 3245E113A9D27095A8AA2D4C /* Pods-yumemi-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -865,7 +871,7 @@
 		};
 		BBDFF3C32634476600B85F7C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34CCC9135B5F9E6192A81998 /* Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig */;
+			baseConfigurationReference = 0F5A7C5935ADF28D0A8A629A /* Pods-yumemi-ios-yumemi-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -886,7 +892,7 @@
 		};
 		BBDFF3C42634476600B85F7C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FA5B5799FD3C1421E0C367A /* Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig */;
+			baseConfigurationReference = 12AF28E376C90CDAE7D849F4 /* Pods-yumemi-ios-yumemi-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -947,7 +953,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BBDFF3E826344CF900B85F7C /* XCRemoteSwiftPackageReference "ios-training" */ = {
+		BBDFF3E826344CF900B85F7C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yumemi-inc/ios-training.git";
 			requirement = {
@@ -958,9 +964,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BBDFF3E926344CF900B85F7C /* YumemiWeather */ = {
+		BBDFF3E926344CF900B85F7C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BBDFF3E826344CF900B85F7C /* XCRemoteSwiftPackageReference "ios-training" */;
+			package = BBDFF3E826344CF900B85F7C /* RemoteSwiftPackageReference */;
 			productName = YumemiWeather;
 		};
 /* End XCSwiftPackageProductDependency section */

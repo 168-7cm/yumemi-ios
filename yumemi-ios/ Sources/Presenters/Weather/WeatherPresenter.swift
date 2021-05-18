@@ -38,21 +38,15 @@ extension WeatherPresenter: WeatherPresenterType {
     
     func fetchWeather(parameters: [String: String]) {
         self.view?.beginActivityIndicator()
-        DispatchQueue.global().async {
-            self.model?.fetchWeather(parameters: parameters) { [weak self] (weatherResult) in
-                DispatchQueue.main.async {
+        self.model?.fetchWeather(parameters: parameters) { [weak self] (weatherResult) in
+            DispatchQueue.main.async {
                 self?.view?.endActivityIndicator()
-                }
                 switch weatherResult {
                 case .success(let weatherEntity):
-                    DispatchQueue.main.async {
                     self?.view?.changeWeatherImageView(weather: weatherEntity.weather)
                     self?.view?.changeTemperatureLabel(maxTemp: weatherEntity.max_temp, minTemp: weatherEntity.min_temp)
-                    }
                 case .failure:
-                    DispatchQueue.main.async {
                     self?.view?.showAlert(errorType: "エラー", errorMessage: "データの取得に失敗しました")
-                    }
                 }
             }
         }

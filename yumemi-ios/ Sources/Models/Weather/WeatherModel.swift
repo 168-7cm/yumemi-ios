@@ -16,14 +16,17 @@ protocol WeatherModelType {
 
 class WeatherModel: WeatherModelType {
 
+
     func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult) {
-        do {
-            let json = changeToJsonString(parameters: parameters)
-            let jsonString = try YumemiWeather.syncFetchWeather(json)
-            let weatherEntity = changeToStruct(jsonString: jsonString)
-            completion(.success(weatherEntity))
-        } catch(let error) {
-            completion(.failure(error))
+        DispatchQueue.global().async {
+            do {
+                let json = self.changeToJsonString(parameters: parameters)
+                let jsonString = try YumemiWeather.syncFetchWeather(json)
+                let weatherEntity = self.changeToStruct(jsonString: jsonString)
+                completion(.success(weatherEntity))
+            } catch(let error) {
+                completion(.failure(error))
+            }
         }
     }
 

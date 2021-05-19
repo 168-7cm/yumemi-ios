@@ -16,9 +16,9 @@ protocol WeatherView: ViewBase {
 
 final class WeatherViewController: ViewControllerBase {
 
-    @IBOutlet private weak var weatherImageView: UIImageView!
-    @IBOutlet private weak var maxTempLabel: UILabel!
-    @IBOutlet private weak var minTempLabel: UILabel!
+    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var maxTempLabel: UILabel!
+    @IBOutlet weak var minTempLabel: UILabel!
 
     typealias Dependency = Dependencies
     struct Dependencies {

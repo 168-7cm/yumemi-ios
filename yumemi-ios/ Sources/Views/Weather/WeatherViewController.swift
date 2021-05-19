@@ -29,7 +29,6 @@ final class WeatherViewController: ViewControllerBase {
     private let parameters = ["area": "tokyo", "date": "2020-04-01T12:00:00+09:00"]
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(viewWillEnterForeground), name: .foreground, object: nil)
     }
 

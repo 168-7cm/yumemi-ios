@@ -60,13 +60,13 @@ extension WeatherViewController: WeatherView {
     func changeWeatherImageView(weather: String) {
         switch weather {
         case "sunny":
-            weatherImageView.image = UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate)
             weatherImageView.tintColor = .red
+            weatherImageView.image = R.image.sunny()?.withRenderingMode(.alwaysTemplate)
         case "cloudy":
-            weatherImageView.image = UIImage(named: "cloudy")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.image = R.image.cloudy()?.withRenderingMode(.alwaysOriginal)
             weatherImageView.tintColor = .gray
         case "rainy":
-            weatherImageView.image = UIImage(named: "rainy")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.image = R.image.rainy()?.withRenderingMode(.alwaysOriginal)
             weatherImageView.tintColor = .blue
         default:
             break

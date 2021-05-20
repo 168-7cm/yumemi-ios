@@ -22,9 +22,9 @@ platform :ios do
   lane :distribution do
 
     # cocoapods pod install
-    cocoapods(
-      podfile: "./Podfile"
-    )
+    # cocoapods(
+    #   podfile: "./Podfile"
+    # )
 
     # ビルド
     gym(

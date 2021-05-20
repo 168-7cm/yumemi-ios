@@ -13,6 +13,7 @@ class WeatherViewControllerTests: XCTestCase {
     private var view: WeatherViewController!
     private var presenter: WeatherPresenterType!
     private var model: WeatherModelType!
+    private let expection = XCTestExpectation()
 
     override func setUp() {
         self.view = WeatherViewController.instansiate()
@@ -21,13 +22,15 @@ class WeatherViewControllerTests: XCTestCase {
     }
 
     func test_天気予報がsunnyの場合ImageViewのImageがsunnyになること() {
-        let parameters = ["weather": "", "max_temp": "100", "min_temp": "0"]
+        let parameters = ["weather": "sunny", "max_temp": "100", "min_temp": "0"]
         self.presenter.fetchWeather(parameters: parameters)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
             XCTAssertEqual(self.view.weatherImageView.image, R.image.sunny())
-            XCTAssertEqual(self.view.weatherImageView.tintColor, .red)
+            XCTAssertEqual(self.view.weatherImageView.tintColor, UIColor.red)
+            self.expection.fulfill()
         }
+        wait(for: [expection], timeout: 1)
     }
 
     func test_天気予報がcloudyの場合ImageViewのImageにcloudyになること() {

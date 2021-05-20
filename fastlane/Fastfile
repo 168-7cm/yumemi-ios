@@ -1,0 +1,44 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+default_platform(:ios)
+
+platform :ios do
+  desc "テスト配布"
+  lane :distribution do
+
+    # cocoapods pod install
+    cocoapods(
+      podfile: "./Podfile"
+    )
+
+    # ビルド
+    gym(
+      workspace: "yumemi-ios.xcworkspace",
+      scheme: "yumemi-ios",
+      export_method: "development",
+      clean: true
+    )
+
+    # firebase app distributaion
+    firebase_app_distribution(
+        app: "1:874811048835:ios:9f145e7e9fee6b1de7ecb6",
+        firebase_cli_token: "",
+        groups: "山本"
+    )
+  end
+end

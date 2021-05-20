@@ -16,41 +16,47 @@ class WeatherViewControllerTests: XCTestCase {
 
     override func setUp() {
         self.view = WeatherViewController.instansiate()
-        self.model = WeatherMockModel()
+        self.model = WeatherMockModel_ViewControllerTest()
         self.presenter = WeatherPresenter().inject(with: WeatherPresenter.Dependency(view: self.view, model: self.model))
     }
 
-    func test_天気予報がsunnyだったらImageViewのImageにsunny画像が設定されること() {
-        let parameters = ["weather": "sunny", "max_temp": "100", "min_temp": "0"]
+    func test_天気予報がsunnyの場合ImageViewのImageがsunnyになること() {
+        let parameters = ["weather": "", "max_temp": "100", "min_temp": "0"]
         self.presenter.fetchWeather(parameters: parameters)
 
-        XCTAssertEqual(self.view.weatherImageView.image, R.image.sunny())
-        XCTAssertEqual(self.view.weatherImageView.tintColor, .red)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            XCTAssertEqual(self.view.weatherImageView.image, R.image.sunny())
+            XCTAssertEqual(self.view.weatherImageView.tintColor, .red)
+        }
     }
 
-    func test_天気予報がcloudyだったらImageViewのImageにcloudy画像が設定されること() {
+    func test_天気予報がcloudyの場合ImageViewのImageにcloudyになること() {
         let parameters = ["weather": "cloudy", "max_temp": "100", "min_temp": "0"]
         self.presenter.fetchWeather(parameters: parameters)
 
-        XCTAssertEqual(self.view.weatherImageView.image, R.image.cloudy())
-        XCTAssertEqual(self.view.weatherImageView.tintColor, .gray)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            XCTAssertEqual(self.view.weatherImageView.image, R.image.cloudy())
+            XCTAssertEqual(self.view.weatherImageView.tintColor, .gray)
+        }
     }
 
-    func test_天気予報がrainyだったらImageViewのImageにrainy画像が設定されること() {
+    func test_天気予報がrainyの場合ImageViewのImageにrainyになること() {
         let parameters = ["weather": "rainy", "max_temp": "100", "min_temp": "0"]
         self.presenter.fetchWeather(parameters: parameters)
 
-        XCTAssertEqual(self.view.weatherImageView.image, R.image.rainy())
-        XCTAssertEqual(self.view.weatherImageView.tintColor, .blue)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            XCTAssertEqual(self.view.weatherImageView.image, R.image.rainy())
+            XCTAssertEqual(self.view.weatherImageView.tintColor, .blue)
+        }
     }
 
     func test_最高気温と最低気温がLabelに表示される() {
-        
+
     }
 }
 
-// WeahterModelのモック
-final class WeatherMockModel: WeatherModelType {
+// ViewControllerテスト用のWeahterModelのモック
+final class WeatherMockModel_ViewControllerTest: WeatherModelType {
 
     func fetchWeather(parameters: [String: String], completion: @escaping WeatherResult) {
         let weather = parameters["weather"]!
@@ -60,4 +66,3 @@ final class WeatherMockModel: WeatherModelType {
         completion(.success(weatherEntity))
     }
 }
-

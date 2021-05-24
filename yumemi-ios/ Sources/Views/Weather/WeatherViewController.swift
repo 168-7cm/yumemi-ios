@@ -16,9 +16,9 @@ protocol WeatherView: ViewBase {
 
 final class WeatherViewController: ViewControllerBase {
 
-    @IBOutlet private weak var weatherImageView: UIImageView!
-    @IBOutlet private weak var maxTempLabel: UILabel!
-    @IBOutlet private weak var minTempLabel: UILabel!
+    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var maxTempLabel: UILabel!
+    @IBOutlet weak var minTempLabel: UILabel!
 
     typealias Dependency = Dependencies
     struct Dependencies {
@@ -65,13 +65,13 @@ extension WeatherViewController: WeatherView {
     func changeWeatherImageView(weather: String) {
         switch weather {
         case "sunny":
-            weatherImageView.image = UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.image = R.image.sunny()?.withRenderingMode(.alwaysTemplate)
             weatherImageView.tintColor = .red
         case "cloudy":
-            weatherImageView.image = UIImage(named: "cloudy")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.image = R.image.cloudy()?.withRenderingMode(.alwaysTemplate)
             weatherImageView.tintColor = .gray
         case "rainy":
-            weatherImageView.image = UIImage(named: "rainy")?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.image = R.image.rainy()?.withRenderingMode(.alwaysTemplate)
             weatherImageView.tintColor = .blue
         default:
             break

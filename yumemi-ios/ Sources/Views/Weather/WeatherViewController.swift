@@ -32,6 +32,11 @@ final class WeatherViewController: ViewControllerBase {
         NotificationCenter.default.addObserver(self, selector: #selector(viewWillEnterForeground), name: .foreground, object: nil)
     }
 
+    // インスタンスが破棄された時
+    deinit {
+        print("WeatherViewControllerのインスタンスが破棄されました！")
+    }
+
     @objc private func viewWillEnterForeground() {
         self.presenter?.fetchWeather(parameters: parameters)
     }

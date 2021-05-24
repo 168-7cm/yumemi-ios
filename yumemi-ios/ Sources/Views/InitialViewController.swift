@@ -23,6 +23,10 @@ final class InitialViewController: ViewControllerBase {
     override func viewDidAppear(_ animated: Bool) {
         self.presenter?.transitionToWeatherViewController()
     }
+
+    deinit {
+        print("InitialViewControllerのインスタンスが破棄されました！")
+    }
 }
 
 extension InitialViewController: ViewControllerInstantiable {

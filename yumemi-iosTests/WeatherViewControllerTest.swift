@@ -26,7 +26,7 @@ class WeatherViewControllerTests: XCTestCase {
         self.presenter.fetchWeather(parameters: parameters)
 
         DispatchQueue.main.asyncAfter(deadline: .now()) {
-            XCTAssertEqual(self.view.weatherImageView.image, R.image.sunny())
+            XCTAssertEqual(self.view.weatherImageView.image, R.image.sunny()?.withRenderingMode(.alwaysTemplate))
             XCTAssertEqual(self.view.weatherImageView.tintColor, UIColor.red)
             self.expection.fulfill()
         }
@@ -38,9 +38,11 @@ class WeatherViewControllerTests: XCTestCase {
         self.presenter.fetchWeather(parameters: parameters)
 
         DispatchQueue.main.asyncAfter(deadline: .now()) {
-            XCTAssertEqual(self.view.weatherImageView.image, R.image.cloudy())
+            XCTAssertEqual(self.view.weatherImageView.image, R.image.cloudy()?.withRenderingMode(.alwaysTemplate))
             XCTAssertEqual(self.view.weatherImageView.tintColor, .gray)
+            self.expection.fulfill()
         }
+        wait(for: [expection], timeout: 1)
     }
 
     func test_天気予報がrainyの場合ImageViewのImageにrainyになること() {
@@ -48,9 +50,11 @@ class WeatherViewControllerTests: XCTestCase {
         self.presenter.fetchWeather(parameters: parameters)
 
         DispatchQueue.main.asyncAfter(deadline: .now()) {
-            XCTAssertEqual(self.view.weatherImageView.image, R.image.rainy())
+            XCTAssertEqual(self.view.weatherImageView.image, R.image.rainy()?.withRenderingMode(.alwaysTemplate))
             XCTAssertEqual(self.view.weatherImageView.tintColor, .blue)
+            self.expection.fulfill()
         }
+        wait(for: [expection], timeout: 1)
     }
 
     func test_最高気温と最低気温がLabelに表示される() {
